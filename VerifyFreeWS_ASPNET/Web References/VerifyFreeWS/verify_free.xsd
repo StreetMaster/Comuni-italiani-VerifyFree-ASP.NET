@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://verifyFreeWS.streetmaster/" targetNamespace="http://verifyFreeWS.streetmaster/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="VerifyFree" type="tns:VerifyFree" />
+  <xs:element name="VerifyFreeResponse" type="tns:VerifyFreeResponse" />
+  <xs:complexType name="VerifyFree">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inFree" type="tns:inputVerifyFree" />
+      <xs:element minOccurs="0" name="key" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inputVerifyFree">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cap" type="xs:string" />
+      <xs:element minOccurs="0" name="localita" type="xs:string" />
+      <xs:element minOccurs="0" name="localita2" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerifyFreeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotOutFree" type="tns:totOutFree" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="totOutFree">
+    <xs:sequence>
+      <xs:element name="codErr" type="xs:int" />
+      <xs:element name="norm" type="xs:int" />
+      <xs:element name="numCand" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="outItem" nillable="true" type="tns:outVerifyFree" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outVerifyFree">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cap" type="xs:string" />
+      <xs:element name="codComune" type="xs:int" />
+      <xs:element minOccurs="0" name="comune" type="xs:string" />
+      <xs:element minOccurs="0" name="frazione" type="xs:string" />
+      <xs:element minOccurs="0" name="provEstesa" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+      <xs:element minOccurs="0" name="regione" type="xs:string" />
+      <xs:element name="scoreComune" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

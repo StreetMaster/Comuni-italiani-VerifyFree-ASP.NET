@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://verifyFreeWS.streetmaster/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="verify_free" targetNamespace="http://verifyFreeWS.streetmaster/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com:80/smws/verify_free?xsd=1" namespace="http://verifyFreeWS.streetmaster/" />
+    </xsd:schema>
+  </types>
+  <message name="VerifyFree">
+    <part name="parameters" element="tns:VerifyFree" />
+  </message>
+  <message name="VerifyFreeResponse">
+    <part name="parameters" element="tns:VerifyFreeResponse" />
+  </message>
+  <portType name="VerifyFree">
+    <operation name="VerifyFree">
+      <input wsam:Action="http://verifyFreeWS.streetmaster/VerifyFree/VerifyFreeRequest" message="tns:VerifyFree" />
+      <output wsam:Action="http://verifyFreeWS.streetmaster/VerifyFree/VerifyFreeResponse" message="tns:VerifyFreeResponse" />
+    </operation>
+  </portType>
+  <binding name="VerifyFreePortBinding" type="tns:VerifyFree">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="VerifyFree">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="verify_free">
+    <port name="VerifyFreePort" binding="tns:VerifyFreePortBinding">
+      <soap:address location="http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com:80/smws/verify_free" />
+    </port>
+  </service>
+</definitions>
