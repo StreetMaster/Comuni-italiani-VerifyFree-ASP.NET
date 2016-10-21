@@ -1,8 +1,11 @@
 # DemoVerifyFreeASP.NET
 Demo ASP.NET per l'utilizzo del ws soap VERIFY FREE di verifica e normalizzazione indirizzi italiani di StreetMaster
 
-Il progetto è sviluppato in C# - Framework 4.6.1
-
+Ambiente di sviluppo
+  - C#
+  - Framework 4.6.1
+  - Visual Studio Professional 2015 SP2
+  
 End point del servizio http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com/smws/verify_free?wsdl
 
 Per l'utilizzo registrarsi sul sito http://streetmaster.it e richiedere la chiave per il servizio VERIFY Free.
