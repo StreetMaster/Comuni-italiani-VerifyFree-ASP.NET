@@ -1,6 +1,6 @@
 # Comuni italiani. Webservice gratuito di verifica e correzione. Servizio free
-## Demo VerifyFree ASP.NET
-Comuni italiani, demo ASP.NET per l'utilizzo del ws soap VERIFY FREE di verifica e correzione. Il servizio è gratuito.
+## VerifyFree ASP.NET
+Comuni italiani, soluzione ASP.NET per l'utilizzo del ws soap VERIFY FREE di verifica e correzione. Il servizio è gratuito.
 
 ### Ambiente di sviluppo
   - C#
