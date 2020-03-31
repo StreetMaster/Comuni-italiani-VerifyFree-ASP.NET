@@ -7,7 +7,7 @@ namespace VerifyFreeWS_ASPNET
     /// realizzato da StreetMaster Italia
     /// 
     /// L'end point del servizio è 
-    ///     http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com/smws/verify_free?wsdl
+    ///     https://streetmaster.streetmaster.it/smws/verify_free?wsdl
     ///     
     /// Per l'utilizzo registrarsi sul sito http://streetmaster.it e richiedere la chiave per il servizio Verify Free solo localita' 
     /// 
