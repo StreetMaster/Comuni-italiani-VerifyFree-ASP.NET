@@ -9,7 +9,7 @@ Comuni italiani, soluzione ASP.NET per l'utilizzo del ws soap VERIFY FREE di ver
   
 ### Endpoint
 ```  
-End point del servizio http://ec2-46-137-97-173.eu-west-1.compute.amazonaws.com/smws/verify_free?wsdl
+    https://streetmaster.streetmaster.it/smws/verify_free?wsdl
 ```
 ### Key
 Per l'utilizzo registrarsi sul sito http://streetmaster.it e richiedere la chiave per il servizio VERIFY Free.
