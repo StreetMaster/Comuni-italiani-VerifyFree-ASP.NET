@@ -30,13 +30,15 @@ namespace VerifyFreeWS_ASPNET
             var verifyFreeObj = new VerifyFreeWS.verify_free();
 
             // classe di input
-            var inVerify = new VerifyFreeWS.inputVerifyFree();
+            var inVerify = new VerifyFreeWS.inputVerifyFree
+            {
 
-            // valorizzazione input
-            inVerify.cap = txtCap.Text;
-            inVerify.provincia = txtProv.Text;
-            inVerify.localita = txtComune.Text;
-            inVerify.localita2 = txtFrazione.Text;
+                // valorizzazione input
+                cap = txtCap.Text,
+                provincia = txtProv.Text,
+                localita = txtComune.Text,
+                localita2 = txtFrazione.Text
+            };
 
             // chiamata al servizio
             var outCall = verifyFreeObj.VerifyFree(inVerify, txtKey.Text);
@@ -64,7 +66,7 @@ namespace VerifyFreeWS_ASPNET
                     outArea.InnerHtml = "<p><font color=\"red\">COMUNE\\FRAZIONE NON RICONOSCIUTO</font></p>";
                 else if (outCall.codErr == 125)
                 {
-                    String htmlOut= "<p><font color=\"red\">COMUNE\\FRAZIONE AMBIGUO</font></p>";
+                    var htmlOut= "<p><font color=\"red\">COMUNE\\FRAZIONE AMBIGUO</font></p>";
 
                     htmlOut += "<table>";
                     foreach (VerifyFreeWS.outVerifyFree outElem in outCall.outItem)
